@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
 });
+
+Route::get('/criar',[PersonagemController::class,'create'])->name('personagems.create');
+
+Route::post('/criar',[PersonagemController::class,'store'])->name('personagems.store');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
