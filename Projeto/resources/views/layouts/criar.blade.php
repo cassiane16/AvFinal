@@ -6,7 +6,7 @@
     <title>Cadastrar Personagem</title>
 </head>
 <body>
-    <form action="{{route('personagem.store')}}" method="post"></form>
+    <form action="{{route('cadastrar_personagems')}}" method="post"></form>
     @csrf
     <label>Nome Personagem</label>
     <input type="text" name="nome" id="nome">

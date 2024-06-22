@@ -34,8 +34,8 @@ class PersonagemController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {//dd($request);
-        $request->all();
+    {//dd($request->all());
+        produto::create(['nome'->$request->nome]);
     }
 
     /**

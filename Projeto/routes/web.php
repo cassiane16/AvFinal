@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PersonagemController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,9 @@ Route::get('/', function () {
 
 });
 
-Route::get('/criar',[PersonagemController::class,'create'])->name('personagems.create');
+Route::get('/criar',[PersonagemController::class,'create']);
 
-Route::post('/criar',[PersonagemController::class,'store'])->name('personagems.store');
+Route::post('/criar',[PersonagemController::class,'store'])->name('cadastrar_personagems');
 
 
 Route::get('/dashboard', function () {
