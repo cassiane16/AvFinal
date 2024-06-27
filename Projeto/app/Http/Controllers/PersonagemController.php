@@ -35,7 +35,8 @@ class PersonagemController extends Controller
      */
     public function store(Request $request)
     {//dd($request->all());
-        produto::create(['nome'->$request->nome]);
+        Personagem::create(['nome'=>$request->nome]);
+        return 'Cadastro concluido com sucesso';
     }
 
     /**
@@ -44,9 +45,10 @@ class PersonagemController extends Controller
      * @param  \App\Models\Personagem  $personagem
      * @return \Illuminate\Http\Response
      */
-    public function show(Personagem $personagem)
+    public function show($id)
     {
-        //
+      $personagem= Personagem::findOrFail($id);
+      return view('layouts.show', ['personagem'=>$personagem]);
     }
 
     /**

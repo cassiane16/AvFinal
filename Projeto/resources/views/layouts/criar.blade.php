@@ -6,10 +6,11 @@
     <title>Cadastrar Personagem</title>
 </head>
 <body>
-    <form action="{{route('cadastrar_personagems')}}" method="post"></form>
+    <form action="{{route('cadastrar_personagems')}}" method="post">
     @csrf
     <label>Nome Personagem</label>
     <input type="text" name="nome" id="nome">
     <button type="sumit">Cadastrar</button>
+    </form>
 </body>
 </html>
