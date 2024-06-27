@@ -8,7 +8,6 @@
 <body>
     <label for="">Personagem</label>
     <input type="text" name="personagem" id="personagem" valor="{{$personagem->nome}}">
-
-    
+    <button type="sumit">Cadastrar</button>
 </body>
 </html>
