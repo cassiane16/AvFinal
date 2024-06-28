@@ -24,7 +24,13 @@ Route::get('/criar',[PersonagemController::class,'create']);
 
 Route::post('/criar',[PersonagemController::class,'store'])->name('cadastrar_personagems');
 
+
 Route::get('/ver/{id}',[PersonagemController::class,'show']);
+
+
+Route::get('/editar/{id}',[PersonagemController::class,'edit']);
+Route::post('/editar/{id}',[PersonagemController::class,'update'])->name('alterar_personagems');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

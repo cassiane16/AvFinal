@@ -7,7 +7,8 @@
 </head>
 <body>
     <label for="">Personagem</label>
-    <input type="text" name="personagem" id="personagem" valor="{{$personagem->nome}}">
-    <button type="sumit">Cadastrar</button>
+    <input type="text" name="personagem" id="personagem" value="{{$personagem->nome}}">
+
 </body>
 </html>
+

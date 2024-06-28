@@ -64,3 +64,4 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 
 
+git config --global user.name "cassiane16"

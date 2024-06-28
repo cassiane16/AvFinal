@@ -10,7 +10,7 @@
     @csrf
     <label>Nome Personagem</label>
     <input type="text" name="nome" id="nome">
-    <button type="sumit">Cadastrar</button>
+    <button type="submit">Cadastrar</button>
     </form>
 </body>
 </html>

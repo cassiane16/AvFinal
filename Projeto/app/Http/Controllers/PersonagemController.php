@@ -47,7 +47,7 @@ class PersonagemController extends Controller
      */
     public function show($id)
     {
-      $personagem= Personagem::findOrFail($id);
+      $personagem= Personagem::findOrFail($id); 
       return view('layouts.show', ['personagem'=>$personagem]);
     }
 
@@ -57,9 +57,10 @@ class PersonagemController extends Controller
      * @param  \App\Models\Personagem  $personagem
      * @return \Illuminate\Http\Response
      */
-    public function edit(Personagem $personagem)
+    public function edit($id)
     {
-        //
+      $personagem= Personagem::findOrFail($id); 
+      return view('layouts.editar', ['personagem'=>$personagem]);
     }
 
     /**
