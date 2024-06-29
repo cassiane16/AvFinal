@@ -31,6 +31,8 @@ Route::get('/ver/{id}',[PersonagemController::class,'show']);
 Route::get('/editar/{id}',[PersonagemController::class,'edit']);
 Route::post('/editar/{id}',[PersonagemController::class,'update'])->name('alterar_personagems');
 
+Route:: get('/excluir/{id}', [PersonagemController::class, 'delete']);
+Route:: post('/excluir/{id}', [PersonagemController::class, 'destroy'])->name('excluir_personagems');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

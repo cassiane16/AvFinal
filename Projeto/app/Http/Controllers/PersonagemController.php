@@ -70,9 +70,11 @@ class PersonagemController extends Controller
      * @param  \App\Models\Personagem  $personagem
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Personagem $personagem)
+    public function update($request, $id)
     {
-        //
+        $personagem= Personagem::findOrFail($id); 
+        Personagem::update(['nome'=>$request->nome]);
+        return "Personagem atualizado";
     }
 
     /**
@@ -81,8 +83,15 @@ class PersonagemController extends Controller
      * @param  \App\Models\Personagem  $personagem
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Personagem $personagem)
+    public function destroy($id)
     {
-        //
+       $produto->delete(); 
+       return 'produto deletado';
+    }
+    
+    public function delete($id)
+    {
+       $personagem= Personagem::findOrFail($id); 
+       return view('layouts.deletar',['personagem'=>$personagem]);
     }
 }
